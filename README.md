@@ -1,0 +1,3 @@
+Solution code to the question, 'Given a board of rooks in the supplied locations (all rooks are identical there is no white team or black team), find the max number of moves given that moves have to lead to a rook taking another rook`.
+
+That said depth first search should be obvious (which it wasn't to me right away). You crawl through the board looking for a rook, once you find a rook you find all the pieces it can reach using a depth first search of rook into rook movements (finding other rooks on the same column and row). The total number of moves is the sum of the (dfs connected pieces - 1) for each group of discontiguous rook pieces (the -1 because there is always a rook leftover from the takes)
